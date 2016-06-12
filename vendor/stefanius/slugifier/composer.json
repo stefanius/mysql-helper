@@ -1,0 +1,21 @@
+{
+  "name": "stefanius/slugifier",
+  "description": "Slugify your text!",
+  "authors": [
+      {
+          "name": "Stefanius",
+          "email": "sgrootveld@gmail.com"
+      }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+      "php": ">=5.4",
+      "stefanius/manipulation": "^0.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.0"
+  },
+  "autoload": {
+      "psr-4": { "Stefanius\\Slugifier\\": "src/Stefanius/Slugifier/" }
+  }
+}

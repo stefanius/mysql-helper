@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/dagvandeweek":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/dagvandeweek","hostpath":"/Users/sgrootveld/PhpstormProjects/mysql-helper","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/sgrootveld/PhpstormProjects/mysql-helper","disabled":false,"__vagrantfile":true}}}

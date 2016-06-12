@@ -1,0 +1,13 @@
+{
+  "autoload": {
+    "psr-0": { "": "src/" }
+  },
+  "require": {
+    "stefanius/slugifier": "^0.0.3",
+    "symfony/console": "^3.0",
+    "symfony/process": "^3.0",
+    "symfony/dependency-injection": "^3.0",
+    "laravel/homestead": "^3.0"
+  },
+  "bin": ["bin/mysql-helper"]
+}
