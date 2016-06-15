@@ -40,6 +40,6 @@ class CreateNewDatabaseCommand extends BaseCommand
 
         $output->writeln('Database user: "' . $mysqlSafeDatabaseName . '"');
         $output->writeln('Database name: "' . $mysqlSafeDatabaseName . '"');
-        $output->writeln('Database password: "' . $mysqlSafeDatabaseName . '"');
+        $output->writeln('Database password: "' . $mysqlDbPassword . '"');
     }
 }
