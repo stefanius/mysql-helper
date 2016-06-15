@@ -1,2 +1,0 @@
-# manipulation
-Base manipulation library.

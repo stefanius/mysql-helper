@@ -28,16 +28,18 @@ class CreateNewDatabaseCommand extends BaseCommand
         $rootPassword = $this->askQuestion($input, $output, new Question('Password for ' . $rootUser));
 
         $mysqlSafeDatabaseName = $this->generateMySqlSafeSlug($databaseName);
+        $mysqlDbPassword = $this->generatePassword();
 
         $createDatabaseQuery = $this->getCreateDatabaseQuery($mysqlSafeDatabaseName);
-        $createUserQuery = $this->getCreateUserQuery($mysqlSafeDatabaseName, $this->generatePassword());
+        $createUserQuery = $this->getCreateUserQuery($mysqlSafeDatabaseName, $mysqlDbPassword);
         $grantQuery = $this->getGrantAllQuery($mysqlSafeDatabaseName, $mysqlSafeDatabaseName);
 
         $this->executeQuery($rootUser, $rootPassword, $createDatabaseQuery);
         $this->executeQuery($rootUser, $rootPassword, $createUserQuery);
         $this->executeQuery($rootUser, $rootPassword, $grantQuery);
-        var_dump($createDatabaseQuery);
-        var_dump($createUserQuery);
-        var_dump($grantQuery);
+
+        $output->writeln('Database user: "' . $mysqlSafeDatabaseName . '"');
+        $output->writeln('Database name: "' . $mysqlSafeDatabaseName . '"');
+        $output->writeln('Database password: "' . $mysqlSafeDatabaseName . '"');
     }
 }
